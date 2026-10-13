@@ -1,0 +1,20 @@
+{
+  "FDA_Q90": 24.62142791748047,
+  "reference_total": 21,
+  "reference_used": 20,
+  "candidate_count": 4593,
+  "passes_Q90_count": 941,
+  "final_candidate_count": 7,
+  "candidate_ids": [
+    "MOL011233",
+    "MOL009635",
+    "MOL011802",
+    "MOL000298",
+    "MOL003847",
+    "MOL011290",
+    "MOL011160"
+  ],
+  "vote_rule": "logit > 0.0",
+  "zero_logits_count": 0,
+  "logit_sd_ddof": 1
+}

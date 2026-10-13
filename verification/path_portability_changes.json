@@ -1,0 +1,50 @@
+[
+  {
+    "script": "build_graph_dataset.py",
+    "path_constants_replaced": 3,
+    "original_sha256": "091674b176f280333afedb41994c5382a48442b32cbb21c88e82facdace98d8d",
+    "portable_sha256": "ef78b29bbb2f52c03c522e6f3c70717cdd6689bd0ed06309b6ba29f4bc4b5391"
+  },
+  {
+    "script": "build_scaffold_split.py",
+    "path_constants_replaced": 1,
+    "original_sha256": "b82746c052be7a27bbfb221db2316d42f2f066849028623c2e14b4b817628a65",
+    "portable_sha256": "0fd8c7567cfa9de4efeaa4a53a08b0826b862afcbf7c36b72c686d8362cba13f"
+  },
+  {
+    "script": "train_docking_mlp_qc_all20_multiseed.py",
+    "path_constants_replaced": 3,
+    "original_sha256": "5aa8210c986c80e3a4923be563a43f7d4ca53d9eba9afbab027636f18d7b8492",
+    "portable_sha256": "5ec74e440c4482e98cab5eb42cccc47135240c524da9d327f66178a0bd0717fe"
+  },
+  {
+    "script": "train_graph_only_multiseed_scaffold.py",
+    "path_constants_replaced": 3,
+    "original_sha256": "97cf74f0b6d08cd85a82c4cc61c38ef5c55262f5fca4510422999682cd0d8795",
+    "portable_sha256": "7374f6a30982a865794eb294396b6f2b5e649f680ece8cc11d88a3f50ea12cf2"
+  },
+  {
+    "script": "train_graph_docking_qc_all20_multiseed.py",
+    "path_constants_replaced": 3,
+    "original_sha256": "2ab26f8486a39d5810336637dd29e681a79daedfd23ed0d0598eda824dfc4b13",
+    "portable_sha256": "58e280c6c8124f309770abeb2a64d7a85dd4b5d3962e04512108a5b5f02d9ae6"
+  },
+  {
+    "script": "screen_fmh_candidates_qc_graph_docking_multiseed_v2.py",
+    "path_constants_replaced": 3,
+    "original_sha256": "c2ab43cf962860d841fe94c35b819b3d5f652967ac0afea7e8fdc2ad9f190e8b",
+    "portable_sha256": "c9b174c16bc47bc4b694d51b4ef2c6131d2abb0f18315309f43de08962f10003"
+  },
+  {
+    "script": "screen_fda_ABC47_qc_graph_docking_v1.py",
+    "path_constants_replaced": 3,
+    "original_sha256": "4caf3d034256add0549a05100642f84e90985553821f653fe84b3d4163d60af3",
+    "portable_sha256": "adcd55990fc069d987901ed8e2448d5cdda8f4c07ab64a873a5c8fd9429c9499"
+  },
+  {
+    "script": "calculate_fda_AB21_ABC47_thresholds_v1.py",
+    "path_constants_replaced": 1,
+    "original_sha256": "8d80794365822a65fc59f978662f729c8c6d65698e44f2fd643276fb77ca8af2",
+    "portable_sha256": "73caac8438245c1d101c28d16bfb4e97cb3332cc168031dabb0ab16f38b8481c"
+  }
+]

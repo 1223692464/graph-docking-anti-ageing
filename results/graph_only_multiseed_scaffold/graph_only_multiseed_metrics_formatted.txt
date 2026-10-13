@@ -1,0 +1,20 @@
+Graph-only multi-seed metrics summary
+================================================================================
+Input: /home/zyh/aging_proj/results/graph_only_multiseed_scaffold/multiseed_summary.csv
+Rows in multiseed_summary.csv: 5
+
+[Detected columns]
+seed, best_epoch, best_val_pr_auc, train_roc_auc, train_pr_auc, train_p_at_20, train_p_at_50, train_p_at_100, val_roc_auc, val_pr_auc, val_p_at_20, val_p_at_50, val_p_at_100, test_roc_auc, test_pr_auc, test_p_at_20, test_p_at_50, test_p_at_100
+
+[Formatted metrics]
+     model split  metric     column_used  n_seed     mean       sd       mean±sd
+Graph-only   Val ROC-AUC best_val_pr_auc       5 0.984381 0.002833 0.9844±0.0028
+Graph-only   Val  PR-AUC best_val_pr_auc       5 0.984381 0.002833 0.9844±0.0028
+Graph-only   Val    P@20     val_p_at_20       5 1.000000 0.000000 1.0000±0.0000
+Graph-only   Val    P@50     val_p_at_50       5 0.956000 0.021909 0.9560±0.0219
+Graph-only   Val   P@100    val_p_at_100       5 0.550000 0.000000 0.5500±0.0000
+Graph-only  Test ROC-AUC    test_roc_auc       5 0.874846 0.021922 0.8748±0.0219
+Graph-only  Test  PR-AUC     test_pr_auc       5 0.950381 0.007871 0.9504±0.0079
+Graph-only  Test    P@20    test_p_at_20       5 1.000000 0.000000 1.0000±0.0000
+Graph-only  Test    P@50    test_p_at_50       5 0.888000 0.010954 0.8880±0.0110
+Graph-only  Test   P@100   test_p_at_100       5 0.692308 0.000000 0.6923±0.0000

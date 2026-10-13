@@ -1,0 +1,44 @@
+{
+  "seed": 888,
+  "split_mode": "scaffold",
+  "graph_dataset": "/home/zyh/aging_proj/data/processed/graph_dataset.pt",
+  "split_file": "/home/zyh/aging_proj/data/processed/split_idx_scaffold.pt",
+  "train_samples": 5019,
+  "val_samples": 117,
+  "test_samples": 78,
+  "train_positive_P": 105,
+  "val_positive_P": 55,
+  "test_positive_P": 54,
+  "train_unlabeled_U": 4914,
+  "val_unlabeled_U": 62,
+  "test_unlabeled_U": 24,
+  "node_dim": 48,
+  "edge_dim": 13,
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.2,
+  "pos_weight": 46.8,
+  "best_epoch": 16,
+  "best_val_pr_auc": 0.9860961505010786,
+  "train_metrics": {
+    "roc_auc": 0.9911215768358627,
+    "pr_auc": 0.9603374481969961,
+    "p_at_20": 1.0,
+    "p_at_50": 1.0,
+    "p_at_100": 0.949999988079071
+  },
+  "val_metrics": {
+    "roc_auc": 0.9868035190615836,
+    "pr_auc": 0.9860961505010786,
+    "p_at_20": 1.0,
+    "p_at_50": 0.9599999785423279,
+    "p_at_100": 0.550000011920929
+  },
+  "test_metrics": {
+    "roc_auc": 0.8580246913580247,
+    "pr_auc": 0.9428091135666092,
+    "p_at_20": 1.0,
+    "p_at_50": 0.8799999952316284,
+    "p_at_100": 0.692307710647583
+  }
+}

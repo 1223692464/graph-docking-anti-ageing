@@ -1,0 +1,39 @@
+Docking-only QC MLP multiseed summary
+================================================================================
+SPLIT_MODE: scaffold
+SOURCE_TYPE: raw_xlsx
+SEEDS: [42, 412, 719, 666, 888]
+ZERO_AS_MISSING: True
+IMPUTE_STRATEGY: train_median
+USE_AFFINITY_DIRECTION: True
+ADD_TARGET_SUCCESS_FLAGS: True
+ADD_COVERAGE_FEATURE: True
+N_FEATURES: 41
+FEATURE_COLS: ['1A9U__affinity_z', '2YXJ__affinity_z', '3O96__affinity_z', '4CFE__affinity_z', '4HHY__affinity_z', '4JPS__affinity_z', '4JSX__affinity_z', '4KIK__affinity_z', '4LXZ__affinity_z', '4OYS__affinity_z', '4WXX__affinity_z', '4XJT__affinity_z', '4ZZJ__affinity_z', '6MXE__affinity_z', '6OOK__affinity_z', '6SP1__affinity_z', '6VGL__affinity_z', '7PZC__affinity_z', '8DSE__affinity_z', '9KTK__affinity_z', '1A9U__success_flag', '2YXJ__success_flag', '3O96__success_flag', '4CFE__success_flag', '4HHY__success_flag', '4JPS__success_flag', '4JSX__success_flag', '4KIK__success_flag', '4LXZ__success_flag', '4OYS__success_flag', '4WXX__success_flag', '4XJT__success_flag', '4ZZJ__success_flag', '6MXE__success_flag', '6OOK__success_flag', '6SP1__success_flag', '6VGL__success_flag', '7PZC__success_flag', '8DSE__success_flag', '9KTK__success_flag', 'docking_coverage_feature']
+
+Per-seed summary:
+ seed  best_epoch  best_val_pr_auc  train_roc_auc  train_pr_auc  train_p_at_20  train_p_at_50  train_p_at_100  val_roc_auc  val_pr_auc  val_p_at_20  val_p_at_50  val_p_at_100  test_roc_auc  test_pr_auc  test_p_at_20  test_p_at_50  test_p_at_100
+   42          53         0.810401       0.971255      0.718279           1.00           0.88            0.69     0.830797    0.810401         0.85         0.74          0.52      0.806327     0.907495          0.95          0.86       0.692308
+  412          25         0.803416       0.938156      0.562828           1.00           0.86            0.54     0.814364    0.803416         0.90         0.72          0.52      0.763117     0.885514          0.95          0.82       0.692308
+  719          26         0.777510       0.950595      0.602863           0.95           0.90            0.57     0.816190    0.777510         0.80         0.70          0.52      0.793981     0.898555          0.95          0.82       0.692308
+  666          31         0.798817       0.948688      0.595267           1.00           0.88            0.55     0.831406    0.798817         0.80         0.76          0.52      0.770062     0.881943          0.95          0.82       0.692308
+  888          38         0.805269       0.954682      0.641022           0.95           0.90            0.62     0.824711    0.805269         0.90         0.70          0.52      0.798611     0.902051          0.95          0.82       0.692308
+
+Mean ± std:
+best_epoch: 34.6000 ± 11.5022
+best_val_pr_auc: 0.7991 ± 0.0128
+train_roc_auc: 0.9527 ± 0.0120
+train_pr_auc: 0.6241 ± 0.0596
+train_p_at_20: 0.9800 ± 0.0274
+train_p_at_50: 0.8840 ± 0.0167
+train_p_at_100: 0.5940 ± 0.0619
+val_roc_auc: 0.8235 ± 0.0080
+val_pr_auc: 0.7991 ± 0.0128
+val_p_at_20: 0.8500 ± 0.0500
+val_p_at_50: 0.7240 ± 0.0261
+val_p_at_100: 0.5200 ± 0.0000
+test_roc_auc: 0.7864 ± 0.0188
+test_pr_auc: 0.8951 ± 0.0109
+test_p_at_20: 0.9500 ± 0.0000
+test_p_at_50: 0.8280 ± 0.0179
+test_p_at_100: 0.6923 ± 0.0000

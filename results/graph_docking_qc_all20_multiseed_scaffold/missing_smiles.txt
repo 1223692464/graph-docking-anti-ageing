@@ -1,0 +1,2 @@
+O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O
+O.O.O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12

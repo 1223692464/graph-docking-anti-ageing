@@ -1,0 +1,21 @@
+_merge_key,drug_name,logit_mean,docking_coverage,positive_vote
+fakrsmqssfjeim,captopril,8.100785636901856,1.0,5
+xtnguqkdfgdxsj,canagliflozin,24.648443984985352,1.0,5
+xraspmiurgncch,zoledronic acid,15.26392478942871,1.0,5
+rlawwysojdyhdc,lisinopril,8.40825080871582,1.0,5
+ipvqlzzihoawmc,perindopril,11.614346504211426,1.0,5
+hdacqvrgbovjii,ramipril,11.967770767211912,1.0,5
+psifnnkumbgkdq,losartan,1.3891777038574218,1.0,3
+acwbqpmhzxgdfx,valsartan,-1.8296268224716183,1.0,2
+rmmxlenwkuumay,telmisartan,12.840471839904785,1.0,4
+jvhxjtbjcfbinq,dapagliflozin,23.701156997680663,1.0,5
+obwasqiliwpzmg,empagliflozin,19.66582298278809,1.0,5
+mciacxazcbvdee,ertugliflozin,24.61842613220215,1.0,5
+metkimkyrpqlgs,atenolol,1.4523310035467147,1.0,4
+oghnvejmjsyvrp,carvedilol,8.33012796640396,1.0,4
+aqhhhdlhhxjyjd,propranolol,4.242210203409195,1.0,4
+ogspwjravkppfi,alendronic acid,25.219660568237305,1.0,5
+mpbvhibujcelcl,ibandronic acid,19.354226112365723,1.0,5
+iidjrnmfwxdhid,risedronic acid,13.324440574645996,1.0,5
+rbtbftrpcnlsde,methylthioninium chloride,11.280940628051756,1.0,5
+zbnzxtgutayrhi,dasatinib,-8.066820979118347,1.0,0

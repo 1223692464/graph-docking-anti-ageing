@@ -1,0 +1,602 @@
+{
+  "status": "PASS",
+  "verification_scope": "Saved-output checks only; training and inference not executed",
+  "python_scripts_parsed": [
+    "scripts/build_graph_dataset.py",
+    "scripts/build_scaffold_split.py",
+    "scripts/calculate_fda_AB21_ABC47_thresholds_v1.py",
+    "scripts/prepare_data.py",
+    "scripts/repo_paths.py",
+    "scripts/reproduce_selection.py",
+    "scripts/screen_fda_ABC47_qc_graph_docking_v1.py",
+    "scripts/screen_fmh_candidates_qc_graph_docking_multiseed_v2.py",
+    "scripts/train_docking_mlp_qc_all20_multiseed.py",
+    "scripts/train_graph_docking_qc_all20_multiseed.py",
+    "scripts/train_graph_only_multiseed_scaffold.py",
+    "scripts/verify_release.py"
+  ],
+  "input_rows": 5214,
+  "input_P": 214,
+  "input_U": 5000,
+  "common_test_rows": 78,
+  "prediction_files_checked": 45,
+  "model_metrics_checked": [
+    {
+      "model": "Docking-only",
+      "seed": 42,
+      "f1": 0.8181818181818182,
+      "mcc": 0.38461694555127807,
+      "balanced_accuracy": 0.6875,
+      "tp": 45,
+      "tn": 13,
+      "fp": 11,
+      "fn": 9,
+      "roc_auc": 0.8063271604938271,
+      "pr_auc": 0.9074952755242327,
+      "threshold": 0.040735424,
+      "p_at_20": 0.95,
+      "p_at_50": 0.86
+    },
+    {
+      "model": "Docking-only",
+      "seed": 412,
+      "f1": 0.8264462809917356,
+      "mcc": 0.28854454190113826,
+      "balanced_accuracy": 0.6087962962962963,
+      "tp": 50,
+      "tn": 7,
+      "fp": 17,
+      "fn": 4,
+      "roc_auc": 0.7631172839506173,
+      "pr_auc": 0.8855140546510714,
+      "threshold": 0.07926905,
+      "p_at_20": 0.95,
+      "p_at_50": 0.82
+    },
+    {
+      "model": "Docking-only",
+      "seed": 719,
+      "f1": 0.8225806451612904,
+      "mcc": 0.23241742005034205,
+      "balanced_accuracy": 0.5763888888888888,
+      "tp": 51,
+      "tn": 5,
+      "fp": 19,
+      "fn": 3,
+      "roc_auc": 0.7939814814814815,
+      "pr_auc": 0.8985554746878637,
+      "threshold": 0.036966383,
+      "p_at_20": 0.95,
+      "p_at_50": 0.82
+    },
+    {
+      "model": "Docking-only",
+      "seed": 666,
+      "f1": 0.8403361344537815,
+      "mcc": 0.372677996249965,
+      "balanced_accuracy": 0.650462962962963,
+      "tp": 50,
+      "tn": 9,
+      "fp": 15,
+      "fn": 4,
+      "roc_auc": 0.7700617283950617,
+      "pr_auc": 0.8819425926620017,
+      "threshold": 0.049084075,
+      "p_at_20": 0.95,
+      "p_at_50": 0.82
+    },
+    {
+      "model": "Docking-only",
+      "seed": 888,
+      "f1": 0.832,
+      "mcc": 0.27661280414335826,
+      "balanced_accuracy": 0.5856481481481481,
+      "tp": 52,
+      "tn": 5,
+      "fp": 19,
+      "fn": 2,
+      "roc_auc": 0.7986111111111112,
+      "pr_auc": 0.9020511352486518,
+      "threshold": 0.018855246,
+      "p_at_20": 0.95,
+      "p_at_50": 0.82
+    },
+    {
+      "model": "Graph-only",
+      "seed": 42,
+      "f1": 0.8867924528301887,
+      "mcc": 0.6481812160876685,
+      "balanced_accuracy": 0.8310185185185185,
+      "tp": 47,
+      "tn": 19,
+      "fp": 5,
+      "fn": 7,
+      "roc_auc": 0.8765432098765432,
+      "pr_auc": 0.9528158116293304,
+      "threshold": 0.5305904,
+      "p_at_20": 1.0,
+      "p_at_50": 0.9
+    },
+    {
+      "model": "Graph-only",
+      "seed": 412,
+      "f1": 0.8543689320388349,
+      "mcc": 0.579192602409376,
+      "balanced_accuracy": 0.8032407407407407,
+      "tp": 44,
+      "tn": 19,
+      "fp": 5,
+      "fn": 10,
+      "roc_auc": 0.9027777777777778,
+      "pr_auc": 0.9593351881657937,
+      "threshold": 0.8976455,
+      "p_at_20": 1.0,
+      "p_at_50": 0.88
+    },
+    {
+      "model": "Graph-only",
+      "seed": 719,
+      "f1": 0.8785046728971962,
+      "mcc": 0.6135438523041443,
+      "balanced_accuracy": 0.8101851851851851,
+      "tp": 47,
+      "tn": 18,
+      "fp": 6,
+      "fn": 7,
+      "roc_auc": 0.8881172839506173,
+      "pr_auc": 0.9554411085671398,
+      "threshold": 0.20000528,
+      "p_at_20": 1.0,
+      "p_at_50": 0.9
+    },
+    {
+      "model": "Graph-only",
+      "seed": 666,
+      "f1": 0.8,
+      "mcc": 0.5348918395448925,
+      "balanced_accuracy": 0.7893518518518519,
+      "tp": 38,
+      "tn": 21,
+      "fp": 3,
+      "fn": 16,
+      "roc_auc": 0.8487654320987654,
+      "pr_auc": 0.941506129076036,
+      "threshold": 0.6623308,
+      "p_at_20": 1.0,
+      "p_at_50": 0.88
+    },
+    {
+      "model": "Graph-only",
+      "seed": 888,
+      "f1": 0.8888888888888888,
+      "mcc": 0.6388888888888888,
+      "balanced_accuracy": 0.8194444444444444,
+      "tp": 48,
+      "tn": 18,
+      "fp": 6,
+      "fn": 6,
+      "roc_auc": 0.8580246913580247,
+      "pr_auc": 0.9428091135666093,
+      "threshold": 0.24412075,
+      "p_at_20": 1.0,
+      "p_at_50": 0.88
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 42,
+      "f1": 0.9142857142857143,
+      "mcc": 0.7410810764999063,
+      "balanced_accuracy": 0.8819444444444444,
+      "tp": 48,
+      "tn": 21,
+      "fp": 3,
+      "fn": 6,
+      "roc_auc": 0.9405864197530864,
+      "pr_auc": 0.9778392088644541,
+      "threshold": 0.32913524,
+      "p_at_20": 1.0,
+      "p_at_50": 0.96
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 412,
+      "f1": 0.84,
+      "mcc": 0.5734146386569556,
+      "balanced_accuracy": 0.8055555555555556,
+      "tp": 42,
+      "tn": 20,
+      "fp": 4,
+      "fn": 12,
+      "roc_auc": 0.8533950617283951,
+      "pr_auc": 0.9372330604192842,
+      "threshold": 0.85525686,
+      "p_at_20": 1.0,
+      "p_at_50": 0.9
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 719,
+      "f1": 0.8846153846153846,
+      "mcc": 0.6592443967173135,
+      "balanced_accuracy": 0.8425925925925926,
+      "tp": 46,
+      "tn": 20,
+      "fp": 4,
+      "fn": 8,
+      "roc_auc": 0.8981481481481481,
+      "pr_auc": 0.9610697667763088,
+      "threshold": 0.9636076,
+      "p_at_20": 1.0,
+      "p_at_50": 0.92
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 666,
+      "f1": 0.9009009009009009,
+      "mcc": 0.6599670323600246,
+      "balanced_accuracy": 0.8171296296296297,
+      "tp": 50,
+      "tn": 17,
+      "fp": 7,
+      "fn": 4,
+      "roc_auc": 0.908179012345679,
+      "pr_auc": 0.963937725061247,
+      "threshold": 0.84061956,
+      "p_at_20": 1.0,
+      "p_at_50": 0.9
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 888,
+      "f1": 0.8888888888888888,
+      "mcc": 0.722274020416524,
+      "balanced_accuracy": 0.8865740740740741,
+      "tp": 44,
+      "tn": 23,
+      "fp": 1,
+      "fn": 10,
+      "roc_auc": 0.9197530864197531,
+      "pr_auc": 0.971298703904396,
+      "threshold": 0.55523556,
+      "p_at_20": 1.0,
+      "p_at_50": 0.94
+    }
+  ],
+  "sample_counts": [
+    {
+      "model": "Docking-only",
+      "seed": 42,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Docking-only",
+      "seed": 42,
+      "split": "val",
+      "n": 115,
+      "P": 53
+    },
+    {
+      "model": "Docking-only",
+      "seed": 42,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Docking-only",
+      "seed": 412,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Docking-only",
+      "seed": 412,
+      "split": "val",
+      "n": 115,
+      "P": 53
+    },
+    {
+      "model": "Docking-only",
+      "seed": 412,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Docking-only",
+      "seed": 719,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Docking-only",
+      "seed": 719,
+      "split": "val",
+      "n": 115,
+      "P": 53
+    },
+    {
+      "model": "Docking-only",
+      "seed": 719,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Docking-only",
+      "seed": 666,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Docking-only",
+      "seed": 666,
+      "split": "val",
+      "n": 115,
+      "P": 53
+    },
+    {
+      "model": "Docking-only",
+      "seed": 666,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Docking-only",
+      "seed": 888,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Docking-only",
+      "seed": 888,
+      "split": "val",
+      "n": 115,
+      "P": 53
+    },
+    {
+      "model": "Docking-only",
+      "seed": 888,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Graph-only",
+      "seed": 42,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Graph-only",
+      "seed": 42,
+      "split": "val",
+      "n": 117,
+      "P": 55
+    },
+    {
+      "model": "Graph-only",
+      "seed": 42,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Graph-only",
+      "seed": 412,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Graph-only",
+      "seed": 412,
+      "split": "val",
+      "n": 117,
+      "P": 55
+    },
+    {
+      "model": "Graph-only",
+      "seed": 412,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Graph-only",
+      "seed": 719,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Graph-only",
+      "seed": 719,
+      "split": "val",
+      "n": 117,
+      "P": 55
+    },
+    {
+      "model": "Graph-only",
+      "seed": 719,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Graph-only",
+      "seed": 666,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Graph-only",
+      "seed": 666,
+      "split": "val",
+      "n": 117,
+      "P": 55
+    },
+    {
+      "model": "Graph-only",
+      "seed": 666,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Graph-only",
+      "seed": 888,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Graph-only",
+      "seed": 888,
+      "split": "val",
+      "n": 117,
+      "P": 55
+    },
+    {
+      "model": "Graph-only",
+      "seed": 888,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 42,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 42,
+      "split": "val",
+      "n": 115,
+      "P": 53
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 42,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 412,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 412,
+      "split": "val",
+      "n": 115,
+      "P": 53
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 412,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 719,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 719,
+      "split": "val",
+      "n": 115,
+      "P": 53
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 719,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 666,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 666,
+      "split": "val",
+      "n": 115,
+      "P": 53
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 666,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 888,
+      "split": "train",
+      "n": 5019,
+      "P": 105
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 888,
+      "split": "val",
+      "n": 115,
+      "P": 53
+    },
+    {
+      "model": "Graph-Docking Fusion",
+      "seed": 888,
+      "split": "test",
+      "n": 78,
+      "P": 54
+    }
+  ],
+  "selection": {
+    "FDA_Q90": 24.62142791748047,
+    "reference_total": 21,
+    "reference_used": 20,
+    "candidate_count": 4593,
+    "passes_Q90_count": 941,
+    "final_candidate_count": 7,
+    "candidate_ids": [
+      "MOL011233",
+      "MOL009635",
+      "MOL011802",
+      "MOL000298",
+      "MOL003847",
+      "MOL011290",
+      "MOL011160"
+    ],
+    "vote_rule": "logit > 0.0",
+    "zero_logits_count": 0,
+    "logit_sd_ddof": 1
+  }
+}

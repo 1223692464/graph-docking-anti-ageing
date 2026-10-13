@@ -4,8 +4,6 @@ Computational reproducibility materials for *Development of a Graph-Docking Fusi
 
 This release contains the final QC-aware Docking-only, Graph-only and Graph-Docking Fusion implementations, modelling inputs, the fixed scaffold split, five-seed checkpoints, saved predictions, FDA-reference filtering evidence, and a 4,593-compound candidate-prediction database snapshot. The study website is https://ksl.xmnk.cn.
 
-**Scope:** this is the computational release. HUVEC and C. elegans source measurements are not included. It does not constitute a complete experimental-data release. Docking scores are supplied as model inputs; generating those scores from receptors and ligands is not reproduced by this package.
-
 ## Quick start
 
 Use a local clone or download and extract GitHub's ZIP of this repository. Run commands from the repository root. Large CSV and PyTorch assets are losslessly gzip-compressed; the preparation command restores their original filenames and checks SHA-256 hashes.
@@ -39,7 +37,6 @@ See [REPRODUCIBILITY_NOTES.md](REPRODUCIBILITY_NOTES.md) for the input-count dis
 | Directory / file | Contents |
 | --- | --- |
 | `scripts/` | Portable implementations and release-verification helpers |
-| `original_scripts/` | Byte-identical source scripts, with original Linux paths preserved |
 | `data/processed/` | Structures, P/U labels, graph tensors, scaffold indices, docking scores and source metadata |
 | `reports/FMH_screen_input_for_best_svm.csv.gz` | Actual 4,593-compound Fusion-screening input; filename is historical |
 | `results/*multiseed_scaffold/` | Five seed checkpoints, train/validation/test predictions, histories, metrics and preprocessing statistics for each model |
@@ -69,49 +66,17 @@ python scripts/train_graph_docking_qc_all20_multiseed.py
 python scripts/screen_fmh_candidates_qc_graph_docking_multiseed_v2.py
 python scripts/screen_fda_ABC47_qc_graph_docking_v1.py
 python scripts/calculate_fda_AB21_ABC47_thresholds_v1.py
-python scripts/select_final_candidates_binding_le5_v2.py
 python scripts/reproduce_selection.py
 ```
 
 Use the provided graph tensors and scaffold-index file for direct reproduction. `build_graph_dataset.py` and `build_scaffold_split.py` are supplied for inspecting or rebuilding preprocessing; they are not needed for the quick start. The graph-builder also emits a legacy random split, which is not the split used by the reported final models.
 
-To recompute the original classification diagnostics with scikit-learn installed:
-
-```bash
-python scripts/test_set_three_model_diagnostics_v2.py --threshold-mode val_f1 --out-dir verification/recomputed_diagnostics
-```
-
-The published classification metrics use a validation-selected F1 threshold, not the screening vote threshold. The historical diagnostic script's row-order fallback is unsuitable for validating cross-model error transitions; this release verifies model-level metrics and identifier-aligned membership, not those error-transition analyses.
-
-## Final selection
-
-The FDA threshold is the linear 90th percentile of `logit_mean` for the AB21 reference subset with `docking_coverage >= 0.75` (20 usable records). It is not the threshold of the broader ABC47 reference or a vote-5-only reference subset. Use full precision for selection; 24.621 is the rounded display value.
-
-The four simultaneous conditions are:
-
-- `positive_vote == 5`;
-- `logit_sd <= 10` (sample SD across five logits, `ddof=1`);
-- `binding_target_count_le5 == 20`;
-- `logit_mean >= FDA_Q90`.
-
-The actual screening implementation defines each positive vote as **`logit > 0.0`**. None of the supplied candidate logits equals zero, so `>= 0.0` would yield the same votes for this specific saved dataset, but is not the implemented comparison.
-
-| Compound ID | Supplied compound name |
-| --- | --- |
-| MOL011233 | Ganoderiol D |
-| MOL009635 | 4,24-methyllophenol |
-| MOL011802 | (24R)-saringosterol |
-| MOL000298 | Ergosterol |
-| MOL003847 | Inophyllum E |
-| MOL011290 | Lucidumol A |
-| MOL011160 | Ergosta-4,7,22-trien-3,6-dione |
-
-Identifiers and names retain the supplied mapping; this release does not provide a new chemical-identity adjudication. Computational prioritisation is distinct from experimental efficacy or mechanism validation.
+The published classification metrics use a validation-selected F1 threshold, not the screening vote threshold. `verify_release.py` recomputes these model-level metrics and checks identifier-aligned membership.
 
 ## Provenance and reuse
 
 The author-supplied positive collection originates from Geroprotectors.org; the U background was selected from ChemDiv. Candidate inputs are the author-supplied medicinal/edible library after structural QC. FDA metadata and supporting-reference fields are retained in the supplied reference CSVs.
 
-Original scripts and input/output assets are preserved and checksum-mapped. Portable copies replace original absolute path constants with repository-relative resolution; they do not change model architectures, loss functions, sampling or selection algorithms. New helpers are clearly separate from the historical implementations.
+Input/output assets and the retained core scripts are checksum-mapped. Portable scripts replace original absolute path constants with repository-relative resolution; they do not change model architectures, loss functions or sampling. New release helpers are separate from the historical implementations. Exploratory scripts and duplicate source copies are not distributed.
 
 Third-party source terms continue to apply. No new blanket licence for third-party data, or unconfirmed historical software versions, is asserted by this release. Only load the included PyTorch/pickle files if you trust their provenance.

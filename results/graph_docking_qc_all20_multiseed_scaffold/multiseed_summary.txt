@@ -1,0 +1,32 @@
+SPLIT_MODE: scaffold
+SEEDS: [42, 412, 719, 666, 888]
+DOCKING_SOURCE_TYPE: raw_xlsx
+QC_FEATURE_DIM: 41
+QC_FEATURE_COLS: ['aff_1A9U', 'aff_2YXJ', 'aff_3O96', 'aff_4CFE', 'aff_4HHY', 'aff_4JPS', 'aff_4JSX', 'aff_4KIK', 'aff_4LXZ', 'aff_4OYS', 'aff_4WXX', 'aff_4XJT', 'aff_4ZZJ', 'aff_6MXE', 'aff_6OOK', 'aff_6SP1', 'aff_6VGL', 'aff_7PZC', 'aff_8DSE', 'aff_9KTK', 'succ_1A9U', 'succ_2YXJ', 'succ_3O96', 'succ_4CFE', 'succ_4HHY', 'succ_4JPS', 'succ_4JSX', 'succ_4KIK', 'succ_4LXZ', 'succ_4OYS', 'succ_4WXX', 'succ_4XJT', 'succ_4ZZJ', 'succ_6MXE', 'succ_6OOK', 'succ_6SP1', 'succ_6VGL', 'succ_7PZC', 'succ_8DSE', 'succ_9KTK', 'docking_coverage']
+
+Per-seed summary:
+ seed  best_epoch  best_val_pr_auc  train_roc_auc  train_pr_auc  train_p_at_20  train_p_at_50  train_p_at_100  val_roc_auc  val_pr_auc  val_p_at_20  val_p_at_50  val_p_at_100  test_roc_auc  test_pr_auc  test_p_at_20  test_p_at_50  test_p_at_100
+   42          52         0.978754       0.997347      0.892464           0.90           0.94            0.87     0.977176    0.978754          1.0         0.96          0.53      0.940586     0.977839           1.0          0.96       0.692308
+  412          20         0.988613       0.995318      0.912435           1.00           1.00            0.85     0.988131    0.988613          1.0         0.98          0.53      0.853395     0.937233           1.0          0.90       0.692308
+  719          23         0.981749       0.974164      0.513990           0.65           0.68            0.59     0.981741    0.981749          1.0         0.94          0.53      0.898148     0.961070           1.0          0.92       0.692308
+  666          16         0.989275       0.989846      0.817135           1.00           0.96            0.74     0.990262    0.989275          1.0         0.96          0.53      0.908179     0.963938           1.0          0.90       0.692308
+  888          39         0.983727       0.999512      0.985669           1.00           1.00            0.96     0.984784    0.983727          1.0         0.96          0.53      0.919753     0.971299           1.0          0.94       0.692308
+
+Mean ± std:
+best_epoch: 30.0000 ± 15.0831
+best_val_pr_auc: 0.9844 ± 0.0045
+train_roc_auc: 0.9912 ± 0.0102
+train_pr_auc: 0.8243 ± 0.1836
+train_p_at_20: 0.9100 ± 0.1517
+train_p_at_50: 0.9160 ± 0.1345
+train_p_at_100: 0.8020 ± 0.1420
+val_roc_auc: 0.9844 ± 0.0052
+val_pr_auc: 0.9844 ± 0.0045
+val_p_at_20: 1.0000 ± 0.0000
+val_p_at_50: 0.9600 ± 0.0141
+val_p_at_100: 0.5300 ± 0.0000
+test_roc_auc: 0.9040 ± 0.0324
+test_pr_auc: 0.9623 ± 0.0155
+test_p_at_20: 1.0000 ± 0.0000
+test_p_at_50: 0.9240 ± 0.0261
+test_p_at_100: 0.6923 ± 0.0000

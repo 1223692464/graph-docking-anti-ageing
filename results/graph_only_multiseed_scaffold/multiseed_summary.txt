@@ -1,0 +1,42 @@
+Graph-only GINE multi-seed scaffold split
+================================================================================
+GRAPH_PATH: /home/zyh/aging_proj/data/processed/graph_dataset.pt
+SPLIT_PATH: /home/zyh/aging_proj/data/processed/split_idx_scaffold.pt
+SEEDS: [42, 412, 719, 666, 888]
+DEVICE: cuda
+node_dim: 48
+edge_dim: 13
+hidden_dim: 128
+num_layers: 3
+dropout: 0.2
+lr: 0.001
+weight_decay: 0.0001
+max_epochs: 100
+patience: 20
+
+Per-seed summary:
+ seed  best_epoch  best_val_pr_auc  train_roc_auc  train_pr_auc  train_p_at_20  train_p_at_50  train_p_at_100  val_roc_auc  val_pr_auc  val_p_at_20  val_p_at_50  val_p_at_100  test_roc_auc  test_pr_auc  test_p_at_20  test_p_at_50  test_p_at_100
+   42          15         0.987934       0.989623      0.913830           1.00           0.98            0.86     0.989150    0.987934          1.0         0.96          0.55      0.876543     0.952816           1.0          0.90       0.692308
+  412          24         0.984572       0.988112      0.814101           0.95           0.96            0.77     0.985044    0.984572          1.0         0.96          0.55      0.902778     0.959335           1.0          0.88       0.692308
+  719          38         0.982546       0.998992      0.973321           1.00           1.00            0.96     0.983284    0.982546          1.0         0.92          0.55      0.888117     0.955441           1.0          0.90       0.692308
+  666          49         0.980757       0.999874      0.994861           1.00           1.00            1.00     0.976833    0.980757          1.0         0.98          0.55      0.848765     0.941506           1.0          0.88       0.692308
+  888          16         0.986096       0.991122      0.960337           1.00           1.00            0.95     0.986804    0.986096          1.0         0.96          0.55      0.858025     0.942809           1.0          0.88       0.692308
+
+Mean ± std:
+best_epoch: 28.4000 ± 14.7411
+best_val_pr_auc: 0.9844 ± 0.0028
+train_roc_auc: 0.9935 ± 0.0055
+train_pr_auc: 0.9313 ± 0.0719
+train_p_at_20: 0.9900 ± 0.0224
+train_p_at_50: 0.9880 ± 0.0179
+train_p_at_100: 0.9080 ± 0.0926
+val_roc_auc: 0.9842 ± 0.0047
+val_pr_auc: 0.9844 ± 0.0028
+val_p_at_20: 1.0000 ± 0.0000
+val_p_at_50: 0.9560 ± 0.0219
+val_p_at_100: 0.5500 ± 0.0000
+test_roc_auc: 0.8748 ± 0.0219
+test_pr_auc: 0.9504 ± 0.0079
+test_p_at_20: 1.0000 ± 0.0000
+test_p_at_50: 0.8880 ± 0.0110
+test_p_at_100: 0.6923 ± 0.0000

@@ -1,0 +1,8 @@
+# Dependency names only: historical training version pins were not recovered.
+numpy
+pandas
+openpyxl
+scikit-learn
+rdkit
+torch
+torch-geometric
